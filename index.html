@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+  <script src="static/flexible.js"></script>
+  <title>vuxprojectmodel</title>
+</head>
+
+<body>
+  <div id="app-box"></div>
+  <!-- built files will be auto injected -->
+  <script type="text/javascript">
+    var u = navigator.userAgent;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+    //alert('是否是Android：'+isAndroid);
+    //alert('是否是iOS：'+isiOS);
+
+    //根据配置来引入
+    if (isAndroid) {
+      //安卓
+      document.write('<script src="cordova.js"><\/script>');
+    } else {
+      //IOS 自动引入，不需要人工引入
+      // document.write('<script src="cordova.js"><\/script>');
+    }
+
+  </script>
+</body>
+
+</html>
